@@ -55,6 +55,14 @@ const EditProfile: React.FC<Props> = ({ data, onSave }) => {
           <div><label className={labelClass}>Details</label><input className={inputClass} value={form.educationDetails} onChange={e => update('educationDetails', e.target.value)} /></div>
         </div>
       </div>
+
+      <div className="rounded-2xl border border-[#D7E2EA]/10 bg-[#D7E2EA]/[0.02] p-6">
+        <h3 className="text-[#D7E2EA] font-bold text-base mb-6">Footer Section</h3>
+        <div className="space-y-5">
+          <div><label className={labelClass}>Let's Talk Text</label><textarea className={`${inputClass} min-h-[80px] resize-y`} value={form.contactText || ''} onChange={e => update('contactText', e.target.value)} /></div>
+          <div><label className={labelClass}>Footer Bio Text</label><textarea className={`${inputClass} min-h-[80px] resize-y`} value={form.footerBio || ''} onChange={e => update('footerBio', e.target.value)} /></div>
+        </div>
+      </div>
     </div>
   );
 };

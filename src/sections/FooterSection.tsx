@@ -30,7 +30,7 @@ const FooterSection: React.FC<Props> = ({ profile }) => {
       </FadeIn>
       <FadeIn delay={0.15} y={20}>
         <p className="text-[#D7E2EA]/50 text-center font-light max-w-lg mx-auto leading-relaxed mb-12 sm:mb-16" style={{ fontSize: 'clamp(0.9rem, 1.6vw, 1.15rem)' }}>
-          Got a project in mind or just want to chat about AI and tech? I&apos;d love to hear from you.
+          {profile.contactText || "Got a project in mind or just want to chat about AI and tech? I'd love to hear from you."}
         </p>
       </FadeIn>
       <FadeIn delay={0.25} y={20}>
@@ -49,7 +49,7 @@ const FooterSection: React.FC<Props> = ({ profile }) => {
               {profile.name.split(' ')[0]}<span className="text-[#B600A8]">.</span>
             </h3>
             <p className="text-[#D7E2EA]/40 font-light text-sm leading-relaxed max-w-xs">
-              AI Engineer & Researcher based in {profile.location}. Passionate about building intelligent solutions that make a difference.
+              {profile.footerBio || `AI Engineer & Researcher based in ${profile.location}. Passionate about building intelligent solutions that make a difference.`}
             </p>
           </div>
         </FadeIn>

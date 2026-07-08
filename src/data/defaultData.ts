@@ -13,6 +13,8 @@ export interface ProfileData {
   linkedinUrl: string;
   education: string;
   educationDetails: string;
+  contactText: string;
+  footerBio: string;
 }
 
 export interface ServiceItem {
@@ -109,6 +111,8 @@ export const defaultProfile: ProfileData = {
   linkedinUrl: 'https://linkedin.com/in/bidyutmedhi',
   education: 'B.Tech CSE — AEC Guwahati',
   educationDetails: 'CGPA: 8.28 | 2020 — 2024',
+  contactText: "Got a project in mind or just want to chat about AI and tech? I'd love to hear from you.",
+  footerBio: "AI Engineer & Researcher based in Guwahati, Assam, India. Passionate about building intelligent solutions that make a difference.",
 };
 
 export const defaultServices: ServiceItem[] = [
