@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  background: #0C0C0C;
+  font-family: 'Kanit', sans-serif;
+  color: #D7E2EA;
+  overflow-x: hidden;
+}
+
+/* ── Hero Heading Gradient ── */
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0C0C;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ── Selection ── */
+::selection {
+  background: rgba(182, 0, 168, 0.3);
+  color: #fff;
+}
+
+/* ── Rotating Gallery ── */
+@keyframes gallery-spin {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery-carousel {
+  animation: gallery-spin 25s linear infinite;
+  transform-style: preserve-3d;
+}
+
+.gallery-carousel:hover {
+  animation-play-state: paused;
+}
+
+/* ── Glow effects ── */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(118, 33, 176, 0.3), 0 0 60px rgba(118, 33, 176, 0.1);
+}
+
+.glow-text {
+  text-shadow: 0 0 40px rgba(182, 0, 168, 0.3);
+}
+
+/* ── Timeline ── */
+.timeline-line {
+  background: linear-gradient(180deg, transparent 0%, #7621B0 20%, #B600A8 80%, transparent 100%);
+}
+
+/* ── Skill bar animation ── */
+@keyframes skill-fill {
+  from {
+    width: 0%;
+  }
+}
+
+.skill-bar-fill {
+  animation: skill-fill 1.5s ease-out forwards;
+}
