@@ -85,7 +85,7 @@ const FooterSection: React.FC<Props> = ({ profile }) => {
       </div>
 
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 pt-6 sm:pt-8">
-        <p className="text-[#D7E2EA]/30 font-light text-xs sm:text-sm">© {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
+        <p className="text-[#D7E2EA]/30 font-light text-xs sm:text-sm"><a href="/admin" className="cursor-pointer hover:text-[#B600A8] transition-colors" title="Admin Login">©</a> {new Date().getFullYear()} {profile.name}. All rights reserved.</p>
         <p className="text-[#D7E2EA]/30 font-light text-xs sm:text-sm flex items-center gap-1">Made with <Heart className="w-3 h-3 text-[#B600A8] fill-[#B600A8]" /> in {profile.location.split(',')[0]}</p>
       </div>
     </footer>
